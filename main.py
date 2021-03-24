@@ -27,7 +27,7 @@ def parse_filenames(filename_string: str) -> list[str]:
 def gui() -> None:
     sg.theme("Dark Blue 3")
     layout = [
-        [sg.Text("Welcome to file-renamepy")],
+        [sg.Text("Welcome to file-renamepy", font="Any 18")],
         [sg.Text("Choose files to be renamed:"), sg.FilesBrowse(key="-SELECTED_FILES-", target=(None, None))],
         [sg.Text("Enter new filenames:"), sg.Multiline(key="-FILENAMES-")],
         [sg.Button("Rename Files")]
