@@ -2,6 +2,7 @@
 from pathlib import Path
 import os
 import PySimpleGUI as sg
+import re
 
 fileList: list[str]
 filenameList: list[str]
@@ -20,7 +21,7 @@ def rename_files(filenames: list[str], files: list[str]) -> None:
 
 # parse filename list from string
 def parse_filenames(filename_string: str) -> list[str]:
-    return filename_string.replace("\n", "").split(",")
+    return re.split(", |,", filename_string.replace("\n", ""))
 
 
 # gui with main functionality

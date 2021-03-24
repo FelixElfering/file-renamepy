@@ -9,6 +9,10 @@ class TestParseFilenames(unittest.TestCase):
         expected_result = ["abc1", "dfg2", "rewd", "g42w", "desti"]
         self.assertEqual(actual_result, expected_result)
 
+    def test_parse_w_spaces(self):
+        actual_result = parse_filenames("abc1, dfg2, rewd, g42w, desti")
+        expected_result = ["abc1", "dfg2", "rewd", "g42w", "desti"]
+        self.assertEqual(actual_result, expected_result)
 
 if __name__ == '__main__':
     unittest.main()
